@@ -1,0 +1,44 @@
+---
+alwaysApply: false
+description: "Apply systematic debugging methodology when encountering errors, failures, or unexpected behavior. Use single-fix approach with validation and rollback strategy."
+---
+
+# Bug Fix and Troubleshooting Methodology
+
+When a fault, error, failure, or unexpected output is experienced:
+
+## Core Principles
+- **Root Cause Focus**: Always try to fix things at the cause, not the symptom
+- **Detailed Analysis**: Be very detailed with summarization and do not miss out things that are important
+- **Systematic Approach**: Follow a structured debugging process
+
+## Step-by-Step Process
+
+1. **Single Fix Approach**
+   - Attempt a maximum of one fix at a time
+   - Never apply multiple changes simultaneously
+
+2. **Validation**
+   - Validate if that fix has resolved the issue
+   - Test thoroughly to confirm the fix works
+
+3. **Rollback Strategy**
+   - If that fix failed to resolve the issue, undo the fix immediately
+   - Reset the fix counter to start fresh
+
+4. **Deep Analysis**
+   - Reevaluate the issue ensuring you make use of detailed line-by-line analysis
+   - Examine logs, error messages, and code execution flow
+   - Consider all possible contributing factors
+
+5. **Iteration**
+   - Continue to iterate on the above steps as required until the issue is resolved
+   - Document each attempt and its outcome
+   - Learn from each failed attempt to inform the next approach
+
+## Additional Guidelines
+- Use logging instead of System.out.println for better debugging
+- Prefer meaningful variable/method/class names to aid in troubleshooting
+- Keep methods small and single-purpose to isolate issues
+- Avoid deep nesting; prefer early returns to simplify debugging
+- Always prefer application.yaml over application.properties for better readability
