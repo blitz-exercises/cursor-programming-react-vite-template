@@ -1,6 +1,8 @@
-# React + TypeScript + Vite
+# ⚡ BLITZ React Vite Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast React development starter built with Vite, TypeScript, and cutting-edge best practices.
+
+![BLITZ](public/blitz-logo.svg)
 
 Currently, two official plugins are available:
 

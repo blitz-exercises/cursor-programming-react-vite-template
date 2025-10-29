@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-black py-8 px-4">
+      <div className="max-w-2xl mx-auto">
+        {/* BLITZ Header */}
+        <div className="mb-8 text-center">
+          <img 
+            src="/blitz-logo-green.webp" 
+            alt="BLITZ" 
+            className="h-32 mx-auto mb-4 drop-shadow-lg"
+          />
+          <p className="text-lg font-semibold text-white">Blitz React Vite Starter</p>
+        </div>
+
+        <div className="bg-black rounded-lg shadow-lg p-8 text-center">
+          <div className="mb-6">
+            <button 
+              onClick={() => setCount((c) => c + 1)}
+              className="px-8 py-3 bg-[#c6ff00] text-black rounded-lg hover:bg-lime-300 transition font-semibold text-lg"
+            >
+              Count: {count}
+            </button>
+          </div>
+          <p className="text-white">
+            Click the button to increment the counter
+          </p>
+        </div>
+
+        <div className="mt-6 text-center text-sm text-white">
+          <p>Built with React 19 • Powered by Vite • Styled with Tailwind ⚡</p>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
