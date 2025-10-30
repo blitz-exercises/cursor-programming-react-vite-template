@@ -4,6 +4,23 @@ A modern React boilerplate project designed to help you quickly start building c
 
 ![BLITZ](public/blitz-logo-green.svg)
 
+## Inhoudsopgave
+
+- [What is Cursor?](#what-is-cursor)
+- [Getting Started](#getting-started)
+  - [Step 1: Install Cursor](#step-1-install-cursor)
+  - [Step 2: Install Git from Cursor](#step-2-install-git-from-cursor)
+  - [Step 3: Clone This Project](#step-3-clone-this-project)
+  - [Step 4: Install Node.js](#step-4-install-nodejs)
+  - [Step 5: Install Dependencies](#step-5-install-dependencies)
+  - [Step 6: Start Development](#step-6-start-development)
+- [Working Effectively with Cursor](#working-effectively-with-cursor)
+- [Setting Up Supabase MCP](#setting-up-supabase-mcp)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
+- [Available Scripts](#available-scripts)
+- [Building Cool Stuff](#building-cool-stuff)
+
 ## What is Cursor?
 
 Cursor is an AI-powered code editor that helps you write code faster and more efficiently. It's built on VS Code and enhanced with AI capabilities to understand your codebase and help you build applications.
@@ -152,24 +169,67 @@ The Supabase MCP (Model Context Protocol) server allows Cursor's AI to interact 
 ### Step 1: Get Your Supabase Access Token
 
 1. Visit [supabase.com](https://supabase.com) and sign in to your account
-2. Go to your account settings (click your profile icon → **Account Settings**)
+2. Go to your account settings (click your profile icon → **Account Preferences**)
 3. Navigate to **Access Tokens** in the left sidebar
-4. Click **Generate New Token**
-5. Give your token a descriptive name (e.g., "Cursor MCP")
+4. Give your token a descriptive name (e.g., "Cursor MCP")
+5. Click **Generate New Token**
 6. Copy the generated token (it starts with `sbp_`)
 7. **Important:** Save this token securely - you won't be able to see it again!
 
 ### Step 2: Configure MCP in Cursor
 
+You can configure the Supabase MCP server using Cursor's built-in UI:
+
+1. Open Cursor Settings:
+   - **macOS:** `Cmd + ,` or go to **Cursor** → **Settings**
+   - **Windows/Linux:** `Ctrl + ,` or go to **File** → **Preferences** → **Settings**
+
+2. Navigate to **Tools** → **MCP** in the settings sidebar
+
+3. Click **New MCP Server** button
+
+4. Fill in the configuration:
+  ```json
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_your_token_here"
+      ]
+    }
+  }
+}
+```
+(replace with your actual token from Step 1)
+
+5. Save the configuration and restart Cursor
+
+**Alternative: Manual Configuration**
+
+If you prefer to edit the configuration file directly:
+
 1. Open your Cursor MCP configuration file:
    - **macOS/Linux:** `~/.cursor/mcp.json`
    - **Windows:** `%APPDATA%\Cursor\mcp.json`
 
-2. Add the Supabase MCP server configuration to the `mcpServers` object:
+2. Add the Supabase MCP server configuration to the `mcpServers` object. Your `mcp.json` file should look like this (the `supabase` entry can be added alongside other MCP servers):
+
+
+**Important:** If you already have other MCP servers configured, add the `supabase` entry inside the existing `mcpServers` object. Make sure to include a comma after the closing brace if there are other servers, or remove the comma if it's the last entry.
+
+Example with other servers already configured:
 
 ```json
 {
   "mcpServers": {
+    "browser-tools": {
+      "command": "npx",
+      "args": ["@browsermcp/mcp@latest"]
+    },
     "supabase": {
       "command": "npx",
       "args": [
