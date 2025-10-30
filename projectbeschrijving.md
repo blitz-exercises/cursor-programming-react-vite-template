@@ -1,8 +1,8 @@
-# 🎯 Projectbeschrijving: Training Schedule Webapp
+# 🎯 Projectbeschrijving: Trainingsprogramma webapp
 
 ## Het Grote Doel
 
-Ga je mee bouwen aan een coole webapplicatie? We gaan een **Training Schedule Webapp** maken waarin trainers moeiteloos trainingsprogramma's van twee maanden kunnen samenstellen. Elke werkdag binnen die periode geldt als trainingsdag - perfect voor gestructureerde leerprogramma's!
+Ga je mee bouwen aan de ideale tool voor Pleun en Olga? We gaan een **Trainingsprogramma Webapp** maken waarin de talent managers moeiteloos trainingsprogramma's van twee maanden kunnen samenstellen. Elke werkdag binnen die periode geldt als trainingsdag - perfect voor gestructureerde leerprogramma's!
 
 ---
 
@@ -12,10 +12,10 @@ Ga je mee bouwen aan een coole webapplicatie? We gaan een **Training Schedule We
 Automatische generatie van een overzichtelijke tabel met alle dagen binnen de twee maanden. Geen handmatig werk meer - de app doet het voor je!
 
 ### 📝 Dagbeschrijving
-Bij elke dag kan een korte tekst worden toegevoegd over de training. Houd het kort en bondig, of ga helemaal los - jij bepaalt hoeveel detail je nodig hebt.
+Bij elke dag kan een korte tekst worden toegevoegd over de training van desbetreffende dag.
 
 ### ⚡ Snel invullen
-Efficiëntie is key! De trainer kan eenvoudig meerdere dagen selecteren en in één keer een trainingstype of onderwerp toewijzen. Of je nu typt of kiest uit een handige lijst, het gaat snel en intuïtief.
+Efficiëntie is key! De talent manager kan eenvoudig meerdere dagen selecteren en in één keer een trainingstype of onderwerp toewijzen. Of je nu typt of kiest uit een handige lijst, het gaat snel en intuïtief.
 
 ### 📄 PDF-export
 Klaar met je programma? Met één klik op de knop download je het volledige programma als mooie PDF. Perfect om te delen met trainees of te printen voor offline gebruik.
@@ -27,10 +27,10 @@ Zowel de website als de gegenereerde PDF volgen de **Createment-stijl**. Denk aa
 
 ## 🎁 Bonusfunctionaliteiten
 
-*(Voor wie nog verder wil gaan en extra uitdaging zoekt!)*
+*(Voor wie heel snel klaar is met vibe coden van dit alles nog verder wil gaan en extra uitdaging zoekt!)*
 
 ### 💾 Supabase-database
-De applicatie is gekoppeld aan een Supabase-database voor opslag van gebruikers, programma's en trainingsdata. Alles veilig en centraal opgeslagen.
+De applicatie is gekoppeld aan een Supabase-database voor opslag van gebruikers, programma's en trainingsdata. Alles veilig en centraal opgeslagen. (Je kunt gratis zelf een account maken, mocht je er niet uit komen vraag Rens) (Extra tip: gebruik supabase MCP)
 
 ### 👔 Talent Manager-login (admin)
 Een Talent Manager kan via e-mail trainees aanmaken (met Supabase Auth) en trainingsprogramma's aan hen toewijzen. Volledige controle over wie wat krijgt.
@@ -49,15 +49,5 @@ Feestdagen in Nederland worden automatisch uitgegrijsd of gemarkeerd als geen tr
 
 ---
 
-## 💡 Waarom dit project?
-
-Dit project combineert praktische functionaliteit met moderne webtechnologie. Het is een perfecte mix van:
-- **UI/UX design** - maak het gebruiksvriendelijk en mooi
-- **State management** - houd alles georganiseerd
-- **PDF generatie** - technisch uitdagend en praktisch nuttig
-- **Database integratie** - leren werken met Supabase
-- **AI integratie** - spannend en modern
-- **Authentication** - gebruikersbeheer en beveiliging
-
-Perfect voor iedereen die wil groeien als full-stack developer! 🚀
+# Succes!!
 

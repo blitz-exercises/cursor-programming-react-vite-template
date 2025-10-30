@@ -145,6 +145,61 @@ When you're satisfied with a feature:
 6. ✅ Close chat and start fresh for next feature
 7. ✅ Repeat!
 
+## Setting Up Supabase MCP
+
+The Supabase MCP (Model Context Protocol) server allows Cursor's AI to interact directly with your Supabase projects, making it easier to manage databases, migrations, and edge functions.
+
+### Step 1: Get Your Supabase Access Token
+
+1. Visit [supabase.com](https://supabase.com) and sign in to your account
+2. Go to your account settings (click your profile icon → **Account Settings**)
+3. Navigate to **Access Tokens** in the left sidebar
+4. Click **Generate New Token**
+5. Give your token a descriptive name (e.g., "Cursor MCP")
+6. Copy the generated token (it starts with `sbp_`)
+7. **Important:** Save this token securely - you won't be able to see it again!
+
+### Step 2: Configure MCP in Cursor
+
+1. Open your Cursor MCP configuration file:
+   - **macOS/Linux:** `~/.cursor/mcp.json`
+   - **Windows:** `%APPDATA%\Cursor\mcp.json`
+
+2. Add the Supabase MCP server configuration to the `mcpServers` object:
+
+```json
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_your_token_here"
+      ]
+    }
+  }
+}
+```
+
+3. Replace `sbp_your_token_here` with the access token you copied in Step 1
+
+4. Save the file and restart Cursor
+
+### Step 3: Verify the Setup
+
+After restarting Cursor:
+1. Open the Agent chat
+2. Try asking the AI: "List my Supabase projects"
+3. If everything is configured correctly, the AI should be able to interact with your Supabase account
+
+### Troubleshooting
+
+- **Token not found:** Make sure you copied the entire token including the `sbp_` prefix
+- **Connection issues:** Verify your internet connection and that Supabase services are accessible
+- **MCP not loading:** Check that the `mcp.json` file has valid JSON syntax
+
 ## Project Structure
 
 This boilerplate follows clean architecture principles:
