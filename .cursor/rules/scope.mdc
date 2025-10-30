@@ -1,0 +1,50 @@
+---
+alwaysApply: true
+description: "Respect the scope of user requests - only implement what is explicitly asked for, never add extra functionality without being asked."
+---
+
+# Scope Respect Rule
+
+## Core Principle
+
+**De scope van de vraag dient altijd gerespecteerd te worden!**
+
+Als er wordt gevraagd om een specifieke methode, functie, of feature, implementeer dan **alleen** wat er wordt gevraagd. Voeg geen extra functionaliteit toe zonder expliciete vraag.
+
+## Examples
+
+### ❌ WRONG - Adding unrequested functionality:
+```
+User asks: "Create a getUser method"
+AI creates: getUser, createUser, deleteUser, updateUser
+```
+
+### ✅ CORRECT - Only what was asked:
+```
+User asks: "Create a getUser method"
+AI creates: getUser (only)
+```
+
+## Guidelines
+
+- **Strict adherence**: If asked for `getUser`, implement ONLY `getUser`
+- **No assumptions**: Do not assume users want CRUD operations when they ask for one method
+- **No "helpful" extras**: Resist the urge to add related functionality "just in case"
+- **Ask first**: If additional functionality might be useful, ask the user first before implementing
+- **Single responsibility**: Each request should be fulfilled exactly as specified
+
+## When to Expand Scope
+
+Only add extra functionality when:
+- The user explicitly asks for it
+- The user approves after you suggest it
+- It's absolutely necessary for the requested feature to work (minimal, critical dependencies only)
+
+## Violation Examples
+
+- ❌ Asking for `getUser` → Implementing full CRUD automatically
+- ❌ Asking for one API endpoint → Creating multiple endpoints
+- ❌ Asking for a component → Adding related components "just in case"
+- ❌ Asking for a feature → Building the entire feature set
+
+Remember: **Follow the user's requirements carefully & to the letter.**
