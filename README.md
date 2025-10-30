@@ -10,26 +10,54 @@ Cursor is an AI-powered code editor that helps you write code faster and more ef
 
 ## Getting Started
 
-### Step 1: Download Cursor
+### Step 1: Install Cursor
 
-1. Visit [cursor.sh](https://cursor.sh)
+1. Visit [cursor.sh](https://cursor.sh) and click **"Download"**
 2. Download Cursor for your operating system (macOS, Windows, or Linux)
 3. Install Cursor following the installation instructions for your platform
+4. Open Cursor after installation
 
-### Step 2: Clone This Project in Cursor
+### Step 2: Install Git from Cursor
 
-1. **Open Cursor**
-2. **Clone the repository directly via URL:**
-   - Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Windows/Linux) to open the command palette
-   - Type "Git: Clone" and select it
-   - Paste the repository URL when prompted
-   - Choose a folder to clone the project into
-   - Cursor will automatically clone the repository and prompt you to open it
-3. **Open the project:**
-   - Once cloned, Cursor will prompt you to open the folder
-   - Click "Open" to start working immediately
+If you don't have Git installed on your computer:
 
-### Step 3: Install Dependencies
+1. In Cursor, look at the **top left** of the window
+2. Click on the **Git** menu
+3. Cursor will detect if Git is missing and guide you to install it
+4. Follow the on-screen instructions:
+   - Click **Next** through the installation steps
+   - Complete the installation on your computer
+   - Restart Cursor if prompted
+
+### Step 3: Clone This Project
+
+1. In Cursor, click on **Git** in the top left menu
+2. Select **"Clone from Repository"** (or "Clone Repository")
+3. Paste the repository URL when prompted
+4. Choose a folder to clone the project into
+5. Cursor will automatically clone the repository and prompt you to open it
+6. Click **"Open"** to start working
+
+### Step 4: Install Node.js
+
+This project requires Node.js to run. If you don't have Node.js installed:
+
+1. Visit [nodejs.org/en/download](https://nodejs.org/en/download)
+2. Download the **LTS (Long Term Support)** version for your operating system
+3. Run the installer and follow the installation wizard:
+   - Click **Next** through the installation steps
+   - Accept the license agreement
+   - Complete the installation
+4. Verify the installation by opening a terminal and running:
+   ```bash
+   node --version
+   npm --version
+   ```
+   You should see version numbers displayed.
+
+> **Note:** The Node.js installer includes npm (Node Package Manager), which is required to install project dependencies.
+
+### Step 5: Install Dependencies
 
 Open the integrated terminal in Cursor (`Ctrl+`` ` on Windows/Linux or `Cmd+`` ` on macOS) and run:
 
@@ -39,7 +67,7 @@ npm install
 
 > **Note:** All npm commands work identically on Windows, macOS, and Linux. This project is fully cross-platform compatible.
 
-### Step 4: Start Development
+### Step 6: Start Development
 
 ```bash
 npm run dev
