@@ -2,7 +2,6 @@
 
 A modern React boilerplate project designed to help you quickly start building cool stuff with React using Cursor. This template includes Vite, TypeScript, TailwindCSS, React Query, and follows clean architecture best practices.
 
-![BLITZ](public/blitz-logo-green.svg)
 
 ## Inhoudsopgave
 
@@ -19,7 +18,7 @@ A modern React boilerplate project designed to help you quickly start building c
 - [Project Structure](#project-structure)
 - [Tech Stack](#tech-stack)
 - [Available Scripts](#available-scripts)
-- [Building Cool Stuff](#building-cool-stuff)
+- [Start!](#building-cool-stuff)
 
 ## What is Cursor?
 
@@ -165,6 +164,8 @@ When you're satisfied with a feature:
 ## Setting Up Supabase MCP
 
 The Supabase MCP (Model Context Protocol) server allows Cursor's AI to interact directly with your Supabase projects, making it easier to manage databases, migrations, and edge functions.
+
+### Step 0: Create a Supabase account (its free)
 
 ### Step 1: Get Your Supabase Access Token
 
