@@ -2,7 +2,7 @@
 
 A modern React boilerplate project designed to help you quickly start building cool stuff with React using Cursor. This template includes Vite, TypeScript, TailwindCSS, React Query, and follows clean architecture best practices.
 
-![BLITZ](public/blitz-logo.svg)
+![BLITZ](public/blitz-logo-green.svg)
 
 ## What is Cursor?
 
@@ -74,6 +74,76 @@ npm run dev
 ```
 
 Your app will be available at `http://localhost:5173`
+
+## Working Effectively with Cursor
+
+To maximize your productivity and minimize token usage while working with Cursor, follow this workflow:
+
+### 1. Start Your Development Server
+
+**Before you begin coding**, make sure to start the development server so you can see your changes in real-time:
+
+```bash
+npm run dev
+```
+
+Your app will be available at `http://localhost:5173` - keep this open in your browser throughout development.
+
+### 2. Open the Agent Chat
+
+1. Look at the **right-hand side** of the Cursor window
+2. Click the **Agent** button (∞ icon) to open the agent chat
+3. This opens the AI assistant that can help you write and modify code
+
+### 3. Use Detailed Prompts to Save Tokens
+
+**Tip:** Before starting your coding session, prepare a detailed prompt describing what you want to build. You can:
+- Write it in advance using ChatGPT or another tool
+- Include specific requirements, file structures, and technical details
+- Copy the detailed prompt into Cursor's agent chat
+
+This approach saves tokens because you're being clear upfront instead of going back and forth with clarifications.
+
+### 4. Use "Ask" Mode for Questions
+
+When you have questions or need quick information without code changes:
+1. Click the **Agent** dropdown button on the right side
+2. Select **"Ask"** mode from the dropdown menu
+3. This mode is optimized for questions and saves tokens compared to full agent mode
+
+Use "Ask" mode for:
+- Understanding how code works
+- Getting explanations
+- Quick clarifications
+- Debugging help
+
+### 5. Commit Your Changes Regularly
+
+After you've added functionality and tested it:
+
+1. Press `/` to open the command palette
+2. Type "git commit" and select the **git-commit** command
+3. This will stage and commit your changes with a helpful commit message
+
+**Why commit regularly?** This creates checkpoints you can revert to if something goes wrong. It's like saving your progress in a game!
+
+### 6. Start Fresh for Each Feature
+
+When you're satisfied with a feature:
+1. Close the current agent chat
+2. Start a new chat for your next feature
+
+**Why?** This keeps token usage limited and prevents chat history from becoming too long, which can slow down responses and increase costs.
+
+### Development Workflow Summary
+
+1. ✅ Run `npm run dev` to start the server
+2. ✅ Open Agent chat (∞ button on right)
+3. ✅ Use detailed prompts (prepared in advance)
+4. ✅ Build and test your feature
+5. ✅ Commit changes using `/` → "git commit"
+6. ✅ Close chat and start fresh for next feature
+7. ✅ Repeat!
 
 ## Project Structure
 
